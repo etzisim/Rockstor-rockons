@@ -1,0 +1,32 @@
+{
+  "Node-RED": {
+    "description": "Node-RED is a flow-based programming tool, original developed by IBM’s Emerging Technology Services team and now a part of the JS Foundation.",
+    "ui": {
+      "slug": ""
+    },
+    "website": "https://nodered.org/",
+    "version": "1.0",
+    "containers": {
+      "nodered": {
+        "image": "nodered/node-red-docker",
+        "launch_order": 1,
+        "uid": -1,
+        "ports": {
+          "1880": {
+            "description": "Node-RED UI port. You may need to open it(protocol: tcp) on your firewall.",
+            "host_default": 1880,
+            "label": "Server port",
+            "protocol": "tcp",
+            "ui": true
+          }
+        },
+        "volumes": {
+          "/data": {
+            "description": "Choose a Share for Node-RED configuration.",
+            "label": "Node-RED Config"
+          }
+        }
+      }
+    }
+  }
+}
